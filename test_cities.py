@@ -5,4 +5,7 @@ import pytest
 from functions.city_functions import city_country
 
 def test_city_country() -> None:
-    assert city_country("santiago", "chile") == "Santiago, Chile"
+    assert city_country("santiago", "chile") == "Santiago, Chile - population 1"
+
+def test_city_country_population() -> None:
+    assert city_country("santiago", "chile", 5000000) == "Santiago, Chile - population 5000000"
